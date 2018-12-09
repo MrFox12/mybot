@@ -7,7 +7,8 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   if (msg.content === `${prefix}claim`) {
-    message.author.setRole("⚜️ALYSINATE⚜️")
+    let myRole = message.guild.roles.get("521151450890502175")
+    message.author.addRole(myRole).catch(console.error)
   }
 });
 
